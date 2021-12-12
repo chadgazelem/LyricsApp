@@ -4,7 +4,7 @@ const result = document.getElementById("result");
 
 const apiURL = "https://api.lyrics.ovh";
 
-// Get Search Value
+// get the search input
 form.addEventListener("submit", e => {
     e.preventDefault();
     searchValue = search.value.trim();
@@ -16,7 +16,7 @@ form.addEventListener("submit", e => {
     }
 })
 
-// Search function
+// Function search
 async function beginSearch(searchValue) {
     const searchResult = await fetch(`${apiURL}/suggest/${searchValue}`);
     const data = await searchResult.json();
@@ -64,4 +64,4 @@ async function getLyrics(artist, songTitle) {
     result.innerHTML = `<h2><strong>${artist}</strong> - ${songTitle}</h2><br><br><br>
     <p>${lyrics}</p>`;
   
-  }
+  } 

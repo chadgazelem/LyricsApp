@@ -1,15 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 
 
-:root {
-    --white: #fff;
-    --black: #1c2b2d;
-    --blue: #31326f;
-    --color-primary: #9d0191;
-    --color-sec: #868686;
-    --color-grey: #eee;
-    --color-dark-grey: #222831;
-}
+
 /* font-family: 'Montserrat', sans-serif; */
 
 
@@ -29,7 +21,7 @@ body {
     background: url(IMG/disc.jpg) no-repeat center;
     background-size: cover;
     background-attachment: fixed;
-    height: 100vh;
+    height: 760px;
     position: relative;
 }
 
@@ -66,22 +58,14 @@ p {
     line-height: 1.5;
 }
 
-/* img {
-    width: 100%;
-} */
-/* header img{
-    width: 29%;
-    position: absolute;
-    top: -343px;
-    bottom: -22px;
-    transform: rotate(-29deg);
-} */
 
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 0 20px;
-
+/***************************
+*     Header      *
+***************************/
 }
 
 header .container{
@@ -98,24 +82,28 @@ header h1 {
     font-size: 75px;
 }
 
+/***************************
+*     FORMS       *
+***************************/
+
 form input,
 form button {
     outline: none;
     border: none;
-    padding: 1rem;
-    font-size: 1.6rem;
+    padding: 10px;
+    font-size: 17px;
     font-family: inherit;
 }
 form input {
     width: 50%;
-    border-radius: 1rem 0 1rem 0;
+    border-radius: 10px 0 10px 0;
     margin-right: 3px;
-    border-bottom: 3px solid rgb(76, 207, 240);
+    border-bottom: 5px solid rgb(134, 132, 132);
 }
 
 form button {
-    background-color: rgb(76, 207, 240);;
-    color: #fff;
+    background-color: rgb(134, 132, 132);
+    color: rgb(255, 255, 255);
     border: 1px solid transparent;
     border-radius: 3px;
     font-weight: 700;
@@ -124,30 +112,21 @@ form button {
 }
 
 form button:hover {
-    border: 1px solid rgb(0, 0, 0);
+    background-color: rgb(32, 32, 32);
+    border: 1px solid white;
 }
-
+/***************************
+*     Section       *
+***************************/
 section .container {
     display: block;
     margin: 0 auto;
     text-align: center;
     color: #fff;
     padding: 3rem 0;
-    background: rgba(53, 53, 53, 0.6);
+    background: rgba(24, 24, 24, 0.6);
 }
-/* section .container::after {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 50%; 
-    height: 100%;
-    width: 50%;
-    background: rgba(88, 87, 87, 0.6);
-    background-attachment: fixed;
-    z-index: -1;
-    transform: translateX(-50%);
-    
-} */
+
 section .container p {
  color: rgb(255, 255, 255);
 }
@@ -171,11 +150,16 @@ section .container p {
 
 .songs li span{
     font-size: 1.4rem;
-    background-color: var(--color-primary);
+    background-color:rgb(134, 132, 132);
     padding: 5px;
     margin: 5px;
     outline: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: all .3s;
+}
+.songs li span:hover{
+ background-color: rgb(0, 0, 0);
+ border: 1px solid white;
 }
 
